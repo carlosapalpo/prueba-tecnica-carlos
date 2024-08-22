@@ -1,0 +1,13 @@
+@if(show) {
+    <p-panel header="{{country.common}}">
+        <ul>
+            <li><strong>Nombre Oficial </strong> {{country.official}}</li>
+            <li><strong>Moneda </strong> {{country.currencie}}</li>
+            <li><strong>Region </strong> {{country.region}}</li>
+            <li><strong>Capital </strong> {{country.capital}}</li>
+            <li><strong>Area </strong> {{country.area | number}}</li>
+        </ul>
+
+        <iframe [src]="country.map | domSeguro" frameborder="0"></iframe>
+    </p-panel>
+}

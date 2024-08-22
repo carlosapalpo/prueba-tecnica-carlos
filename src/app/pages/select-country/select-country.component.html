@@ -1,0 +1,17 @@
+<div class="flex flex-column flex-wrap align-content-center justify-content-center w-full">
+    <header class="w-full flex flex-column flex-wrap align-content-center justify-content-center">
+        <h1 class="align-items-center">Información de paises</h1>
+    
+        <p class="align-items-center">Selecciona el país del que deseas saber información</p>
+    </header>
+
+    <form [formGroup]="formSelect" class="p-fluid p-form-grid grid justify-content-center" (ngSubmit)="OnSubmit()">
+        <div class="field col-12">
+            <label for="country">Escriba el pais...</label>
+            <input type="text" pInputText formControlName="country" id="country" name="country">
+            <button pButton label="Consultar" class="mt-5" type="submit"></button>
+        </div>
+    </form>
+
+    <router-outlet/>
+</div>
